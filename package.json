@@ -1,0 +1,25 @@
+{
+  "name": "emarsys-integration-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha $(find lib -name \"*.spec.js\")",
+    "build": "rm -rf dist/* && babel lib --ignore *.spec.js --out-dir dist",
+    "prepublish": "npm test && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.3.0",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.1",
+    "sinon-chai": "^2.8.0"
+  }
+}
