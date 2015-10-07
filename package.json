@@ -6,7 +6,10 @@
   "scripts": {
     "test": "mocha $(find lib -name \"*.spec.js\")",
     "build": "rm -rf dist && rsync -rv --exclude=*.spec.js lib/client/* dist",
-    "prepublish": "npm test && npm run build"
+    "prepublish": "npm test && npm run build",
+    "release-patch": "npm version patch -m 'chore(package): update version to %s'",
+    "release-minor": "npm version minor -m 'chore(package): update version to %s'",
+    "release-major": "npm version major -m 'chore(package): update version to %s'"
   },
   "author": "",
   "license": "ISC",
