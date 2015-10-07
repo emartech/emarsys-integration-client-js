@@ -23,5 +23,13 @@
     "mocha": "^2.3.3",
     "sinon": "^1.17.1",
     "sinon-chai": "^2.8.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emartech/emarsys-integration-client-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emartech/emarsys-integration-client-js/issues"
+  },
+  "homepage": "https://github.com/emartech/emarsys-integration-client-js#readme"
 }
