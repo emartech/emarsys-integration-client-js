@@ -14,7 +14,6 @@
     "extend": "^3.0.0"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
     "chai": "^3.3.0",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
