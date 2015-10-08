@@ -1,9 +1,6 @@
 # Build status
 
-|Branch|Status|
-|------|------|
-|master|[![Codeship Status for emartech/emarsys-integration-js](https://codeship.com/projects/c32db210-4f1d-0133-4363-02c24d531ca5/status?branch=master)](https://codeship.com/projects/107145)|
-|production|[![Codeship Status for emartech/emarsys-integration-js](https://codeship.com/projects/c32db210-4f1d-0133-4363-02c24d531ca5/status?branch=production)](https://codeship.com/projects/107145)|
+[![Codeship Status for emartech/emarsys-integration-client-js](https://codeship.com/projects/bddb87a0-4fd8-0133-2d72-6a2063c5e118/status?branch=master)](https://codeship.com/projects/107427)
 
 # emarsys-integration-client-js
 
@@ -20,9 +17,9 @@ npm install emarsys-integration-client --save
 ```javascript
 var ClientApi = require('emarsys-integration-client');
 var clientApi = ClientApi.init({
-	global: window,
-	integrationId: 'my-integration',
-	integrationInstanceId: 1234567
+  global: window,
+  integrationId: 'my-integration',
+  integrationInstanceId: 1234567
 });
 ```
 
