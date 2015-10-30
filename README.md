@@ -43,7 +43,7 @@ __Options__
 
 |Field|Role|Mandatory|Default|
 |-----|----|---------|-------|
-|text: String|Name of the handler to pass the message to.|YES|
+|text: String|Alert message.|YES|
 |icon: String|Icon class of the icon to be rendered on the left side of the alert. Eg. 'check' for a check mark or 'exclamation-circle' for an exclamation mark in a circle.|NO|
 |className: String|Alert sub-class to use when rendering the alert. Eg. 'e-alert-success' for a green bar, 'e-alert-danger' for a red one.|NO|
 |timeout: Int|Amount of time after the alert will fade out and get removed from the DOM, in milliseconds.|NO|1500|
