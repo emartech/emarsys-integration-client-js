@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "extends": [
+    "emarsys"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "angular": true,
+    "expect": true,
+    "inject": true,
+    "onmessage": true
+  },
+  "rules": {
+    "no-unused-expressions": 0
+  }
+}
