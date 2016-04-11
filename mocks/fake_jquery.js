@@ -1,7 +1,7 @@
 'use strict';
 
 var sinon = require('sinon');
-var _ = require('lodash');
+var _extend = require('lodash/extend');
 var jquery = require('jquery');
 
 class FakeJQuery extends Array {
@@ -23,7 +23,7 @@ class FakeJQuery extends Array {
 
   static create() {
     var retval = sinon.stub().returns(new FakeJQuery());
-    retval.extend = _.extend;
+    retval.extend = _extend;
     retval.Deferred = jquery.Deferred;
     return retval;
   }
