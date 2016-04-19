@@ -1,7 +1,8 @@
 # Build status
 
 [![Codeship Status for emartech/emarsys-integration-client-js](https://codeship.com/projects/bddb87a0-4fd8-0133-2d72-6a2063c5e118/status?branch=master)](https://codeship.com/projects/107427)
-
+[![Dependency Status](https://david-dm.org/emartech/emarsys-integration-client-js.svg)](https://david-dm.org/emartech/emarsys-integration-client-js)
+[![devDependency Status](https://david-dm.org/emartech/emarsys-integration-client-js/dev-status.svg)](https://david-dm.org/emartech/emarsys-integration-client-js#info=devDependencies)
 # emarsys-integration-client-js
 
 Emarsys Integration Client JS is a library providing methods of communication between Emarsys and integrated services running in an iframe.
