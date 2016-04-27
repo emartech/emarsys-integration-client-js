@@ -20,6 +20,7 @@
   "author": "Emarsys",
   "license": "UNLICENSED",
   "dependencies": {
+    "lodash": "4.11.1",
     "q": "1.4.1"
   },
   "pre-commit": [
@@ -34,7 +35,6 @@
     "eslint": "2.8.0",
     "eslint-config-emarsys": "4.0.0",
     "jquery": "2.2.3",
-    "lodash": "4.11.1",
     "mocha": "2.4.5",
     "pre-commit": "1.1.2",
     "semantic-release": "4.3.5",
