@@ -126,6 +126,8 @@ Resizing the iframe sending the message.
 |dialog.submit|Submitting an open dialog|
 |dialog.close|Closing an open dialog|
 
+## track(options: Object)
+
 ## unload:init(options: Object)
 
 Setting up click handler for `<a>` elements, popping a navigation confirm dialog when clicked. It makes sense to call this method right after your content gets dirty.
