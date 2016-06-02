@@ -119,14 +119,11 @@ Reloading the whole page.
 
 ## resize(height: Int)
 
-Resizing the iframe sending the message.
-
-|dialog.confirm|Rendering a confirm dialog|
-|dialog.modal|Rendering a modal dialog|
-|dialog.submit|Submitting an open dialog|
-|dialog.close|Closing an open dialog|
+Resizing the iframe.
 
 ## track(options: Object)
+
+Sending a track message.
 
 ## unload:init(options: Object)
 
