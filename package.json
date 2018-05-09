@@ -20,7 +20,7 @@
   "author": "Emarsys",
   "license": "UNLICENSED",
   "dependencies": {
-    "lodash": "4.12.0",
+    "lodash": "4.17.10",
     "q": "1.4.1"
   },
   "pre-commit": [
