@@ -7,15 +7,10 @@
     "clean": "rm -rf dist/*",
     "code-style": "eslint $(find ./lib -name \"*.js\" -not -path \"./node_modules/*\" -not -path \"./dist/*\")",
     "prebuild": "npm run clean",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "test": "NODE_ENV=test mocha $(find . -name \"*.spec.js\" -not -path \"./node_modules/*\" -not -path \"./dist/*\") --compilers js:babel-register",
     "validate-commit-msg": "validate-commit-msg",
     "watch": "npm run build -- --watch"
-  },
-  "release": {
-    "verifyConditions": {
-      "path": "./node_modules/semantic-release/dist/lib/plugin-noop.js"
-    }
   },
   "author": "Emarsys",
   "license": "MIT",
@@ -37,7 +32,7 @@
     "jquery": "3.3.1",
     "mocha": "2.4.5",
     "pre-commit": "1.1.2",
-    "semantic-release": "4.3.5",
+    "semantic-release": "15.4.1",
     "sinon": "1.17.4",
     "sinon-chai": "2.8.0",
     "validate-commit-message": "3.0.1"
