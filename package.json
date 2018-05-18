@@ -18,7 +18,7 @@
     }
   },
   "author": "Emarsys",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "lodash": "4.17.10",
     "q": "1.4.1"
