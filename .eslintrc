@@ -14,7 +14,8 @@
     "angular": true,
     "expect": true,
     "inject": true,
-    "onmessage": true
+    "onmessage": true,
+    "sinon": true
   },
   "rules": {
     "no-unused-expressions": 0
