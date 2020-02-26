@@ -93,9 +93,20 @@ __Options__
 |success: Boolean|True if the result of the dialog is truthy.|YES||
 |data: Object|Arbitrary object to send to the originating service.|NO|{}|
 
+## getUrl(options: Object)
+
+Returns the url of a preset page. [Available targets](https://github.com/emartech/emarsys-integration-js#navigate)
+
+__Options__
+
+|Field|Role|Mandatory|
+|-----|----|---------|
+|target: String|The prespecified target you would like a link to.|YES|
+|params.foo: Object|The general param the actual target needs.|MIXED|
+
 ## navigate(options: Object)
 
-Navigating the browser to a preset page.
+Navigating the browser to a preset page. [Available targets](https://github.com/emartech/emarsys-integration-js#navigate)
 
 __Options__
 
@@ -103,15 +114,6 @@ __Options__
 |-----|----|---------|
 |target: String|The prespecified target you would like to head to.|YES|
 |params.foo: Object|The general param the actual target needs.|MIXED|
-
-__Targets available__
-
-|Target|Action|Params|
-|------|------|------|
-|email_campaigns/list|Will head to the campaign list.||
-|email_campaigns/edit|Will open the editor with the campaign set.|campaign_id|
-|email_analysis/list|Will head to reporting.||
-|email_analysis/details|Will head to reporting details of a campaign.|campaign_id, launch_id|
 
 ## refresh()
 
