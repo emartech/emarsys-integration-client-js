@@ -8,7 +8,7 @@
     "code-style": "eslint $(find ./lib -name \"*.js\" -not -path \"./node_modules/*\" -not -path \"./dist/*\")",
     "prebuild": "npm run clean",
     "semantic-release": "semantic-release",
-    "test": "NODE_ENV=test mocha $(find . -name \"*.spec.js\" -not -path \"./node_modules/*\" -not -path \"./dist/*\") --require babel-register",
+    "test": "NODE_ENV=test mocha $(find . -name \"*.spec.js\" -not -path \"./node_modules/*\" -not -path \"./dist/*\") --require @babel/register",
     "validate-commit-msg": "validate-commit-msg",
     "watch": "npm run build -- --watch"
   },
@@ -22,9 +22,10 @@
     "validate-commit-msg"
   ],
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-register": "6.26.0",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/preset-env": "7.3.1",
+    "@babel/register": "7.0.0",
     "chai": "4.2.0",
     "eslint": "5.14.0",
     "eslint-config-emarsys": "5.1.0",
