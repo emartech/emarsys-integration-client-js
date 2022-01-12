@@ -16,8 +16,22 @@ npm install emarsys-integration-client --save
 # Usage
 
 ```javascript
-var ClientApi = require('emarsys-integration-client');
-var clientApi = ClientApi.init({
+const { integrationClient } = require('emarsys-integration-client');
+
+const result = await itegrationClient.getUrl({ target: 'email_analysis/list' });
+const href = result.data.url;
+
+```
+
+# Legacy usage
+
+Earlier versions of this package required you to create an instance with custom config.
+Most methods now work without this, but if you are using `messageToService` explicitly,
+you might still need to instantiate like this:
+
+```javascript
+var IntegrationClient = require('emarsys-integration-client');
+var integrationClient = IntegrationClient.init({
   global: window,
   integrationId: 'my-integration',
   integrationInstanceId: 1234567
