@@ -37,10 +37,6 @@
     "sinon-chai": "3.3.0",
     "validate-commit-message": "3.0.1"
   },
-  "engines": {
-    "node": "10.15.1",
-    "npm": "6.8.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emartech/emarsys-integration-client-js.git"
