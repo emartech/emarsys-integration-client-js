@@ -172,3 +172,11 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/***`)
 5. Open a Pull Request
 
+# Code of Conduct
+
+See [Code of Conduct here](https://github.com/emartech/.github/blob/main/CODE_OF_CONDUCT.md).
+
+# Licensing
+
+[MIT](https://github.com/emartech/emarsys-integration-client-js/blob/master/LICENSE)
+
