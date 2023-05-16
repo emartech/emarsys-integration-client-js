@@ -172,4 +172,3 @@ See [Code of Conduct here](https://github.com/emartech/.github/blob/main/CODE_OF
 
 [MIT](https://github.com/emartech/emarsys-integration-client-js/blob/master/LICENSE)
 
-[REUSE](https://reuse.software/) ¯\\\_(ツ)_/¯
