@@ -1,0 +1,75 @@
+name: Integration Client JS Build
+
+on: push
+
+env:
+  NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+jobs:
+  test:
+    name: Tests 🚦
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Use correct Node version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+      - name: Cache node_modules
+        id: cache_node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependencies
+        if: ${{ steps.cache_node_modules.outputs.cache-hit != 'true' }}
+        continue-on-error: true
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          npm i
+      - name: Run tests
+        run: npm test
+      - name: Slack notification
+        uses: 8398a7/action-slack@a189acbf0b7ea434558662ae25a0de71df69a435
+        if: ${{ failure() }}
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,author,job,ref
+          job_name: Test 🚦
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  deploy:
+    name: Deploy 🚢
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Use correct Node version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+      - name: Cache node_modules
+        id: cache_node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Release package
+        if: github.ref_name == 'master'
+        run: |
+          npm run build
+          CI=true npm run semantic-release
+      - name: Slack notification
+        uses: 8398a7/action-slack@a189acbf0b7ea434558662ae25a0de71df69a435
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,author,job,ref
+          job_name: Deploy 🚢
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()
