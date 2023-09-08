@@ -40,6 +40,9 @@ class FakeWindow {
     };
 
     this.$ = fakeJQuery.create();
+
+    this.self = this;
+    this.top = this;
   }
 
   addEventListener(type, callback) {
